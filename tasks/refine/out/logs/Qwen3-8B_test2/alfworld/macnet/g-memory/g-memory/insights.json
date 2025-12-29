@@ -1,0 +1,20 @@
+[
+  {
+    "rule": "If an object or tool is not accessible or functional, the agent should reassess the situation, check alternative locations, verify the object's state, and adapt the strategy rather than repeating the same action without modification.",
+    "score": 2,
+    "positive_correlation_tasks": [
+      "look_at_obj-examine the pencil with the desklamp.___41",
+      "look_at_obj-examine the mug with the desklamp.___94"
+    ],
+    "negative_correlation_tasks": []
+  },
+  {
+    "rule": "If the target object is not found in initial priority locations, the agent should systematically check other locations in a structured order instead of repeatedly attempting to open the same location.",
+    "score": 2,
+    "positive_correlation_tasks": [
+      "look_at_obj-examine the pencil with the desklamp.___41",
+      "look_at_obj-examine the mug with the desklamp.___94"
+    ],
+    "negative_correlation_tasks": []
+  }
+]
