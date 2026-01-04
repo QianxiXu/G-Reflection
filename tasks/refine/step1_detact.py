@@ -90,9 +90,6 @@ class ParallelGraphBuilder:
         prompt = f"""
 You are an expert Task Strategist. Your goal is to provide actionable guidance for an AI Agent based on its historical experience.
 
-[Current Trajectory]
-{curr_graph_text}
-
 [Historical Experience]
 Below are the most similar past cases found in the memory:
 {guide_graph_text}
@@ -120,7 +117,7 @@ Output your response in the following format:
         
         else:
             messages = [
-                        {"role": "system", "content": "You are a helpful assistant that outputs strict JSON."},
+                        {"role": "system", "content": "You are a helpful assistant that generates task guidance."},
                         {"role": "user", "content": prompt}
                     ]
             input_text = llm._qwen_tokenizer.apply_chat_template(

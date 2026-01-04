@@ -128,7 +128,7 @@ def build_mas(
     task_manager.mas.add_observer(task_manager.recorder)  
     task_manager.mas.build_system(reasoning_module, mas_memory_module, task_manager.env, task_manager.mas_config)
 
-def run_task(task_manager: TaskManager, args = None, run_task_ids = None, builder: ParallelGraphBuilder = None, max_iter = 5, is_first_re = False, first_re_path = None) -> None:
+def run_task(task_manager: TaskManager, args = None, run_task_ids = None, builder: ParallelGraphBuilder = None, max_iter = 10, is_first_re = False, first_re_path = None) -> None:
 
     # 将轨迹和反思写入到本地文件中 命名方式就在 WORKING_DIR 后面建一个文件夹 就叫做 task_{task_id}_iter_{iter_id}
     record_out_dir_root = os.path.join(WORKING_DIR, 'refine_records')
@@ -249,7 +249,7 @@ def run_task(task_manager: TaskManager, args = None, run_task_ids = None, builde
 
             if done:
                 task_success += 1
-                builder.reset_graph()
+                # builder.reset_graph()
                 if iter_id == 0:
                     success_first_set.append(task_id)
                 else:

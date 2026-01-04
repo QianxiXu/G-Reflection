@@ -620,7 +620,6 @@ class MacNet(MetaMAS):
                 builder.get_log([record_json], target_test_index=0)
                 builder.build_graph_parallel()
                 graph_guidance = builder.get_graph_guidance()
-                print(11111)
             
             
             
